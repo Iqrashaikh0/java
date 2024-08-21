@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Resume Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: darkcyan; /* Light cyan background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: auto;
+        }
+         .form-container {
+            width: 60%;
+            height: 80%;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto
+        }
+        h1 {
+            text-align: center;
+            color: #00796b; /* Teal color for the heading */
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group input, .form-group textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+        .form-group input {
+            background-color: #ffffff; /* White background for input fields */
+        }
+        .form-group textarea {
+            background-color: #f1f8e9; /* Light green background for text areas */
+            resize: vertical;
+        }
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .form-row .form-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        input[type="submit"] {
+            background-color: #00796b; /* Teal background */
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            justify-content: center;
+            display: block;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #004d40; /* Darker teal on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Online Resume Builder</h1>
+        <form action="ResumeServlet" method="post">
+            <div class="form-row">
+                
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="text" id="dob" name="dob" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nationality">Nationality:</label>
+                    <input type="text" id="nationality" name="nationality" required>
+                </div>
+                
+                  <div class="form-group">
+                    <label for="marital_status">Marital Status:</label>
+                    <input type="text" id="marital_status" name="marital_status" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="summary">Professional Summary:</label>
+                <textarea id="summary" name="summary" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="hobbies">Hobbies:</label>
+                <textarea id="hobbies" name="hobbies" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <textarea id="education" name="education" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="experience">Experience:</label>
+                <textarea id="experience" name="experience" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <textarea id="skills" name="skills" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="references">References :</label>
+                <textarea id="skills" name="references" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                
+                <button type="submit" name="action" value="generate">Generate Resume</button>
+                <button type="submit" name="action" value="save" class="save">Save Resume</button>
+            </div> 
+        </form>
+    </div>
+</body>
+</html>
